@@ -1,7 +1,0 @@
-pip install Flask
-export FLASK_APP=app.py
-pip3 install nltk
-import nltk
-nltk.download('words')
-To download the corpus
-run : python -m nltk.downloader all
