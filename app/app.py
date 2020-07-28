@@ -19,3 +19,8 @@ def adder_page():
 			return render_template("error.html", e=errors)
 	elif request.method=="GET":
 		return render_template("home.html")
+		
+# Run the service on the local server it has been deployed to,
+# listening on port 8080.
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
