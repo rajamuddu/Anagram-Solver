@@ -6,12 +6,12 @@
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "executionRoleArn": "REPLACE_ME_ECS_SERVICE_ROLE_ARN",
-  "taskRoleArn": "REPLACE_ME_ECS_TASK_ROLE_ARN",
+  "executionRoleArn": "arn:aws:iam::398666377579:role/AnagramSolverCoreStack-EcsServiceRole-TY6B0GSLLMJ2",
+  "taskRoleArn": "arn:aws:iam::398666377579:role/AnagramSolverCoreStack-ECSTaskRole-GG1N0ZNIRMC5",
   "containerDefinitions": [
     {
-      "name": "MythicalMysfits-Service",
-      "image": "REPLACE_ME_IMAGE_TAG_USED_IN_ECR_PUSH",
+      "name": "AnagramSolver-Service",
+      "image": "398666377579.dkr.ecr.ca-central-1.amazonaws.com/anagram-solver/service:latest",
       "portMappings": [
         {
           "containerPort": 8080,
@@ -21,9 +21,9 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "mythicalmysfits-logs",
-          "awslogs-region": "REPLACE_ME_REGION",
-          "awslogs-stream-prefix": "awslogs-mythicalmysfits-service"
+          "awslogs-group": "anagram-solver-logs",
+          "awslogs-region": "ca-central-1",
+          "awslogs-stream-prefix": "awslogs-anagram-solver-service"
         }
       },
       "essential": true

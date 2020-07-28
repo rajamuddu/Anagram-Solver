@@ -1,6 +1,6 @@
 {
-  "serviceName": "MythicalMysfits-Service",
-  "cluster": "MythicalMysfits-Cluster",
+  "serviceName": "AnagramSolver-Service",
+  "cluster": "AnagramSolver-Cluster",
   "launchType": "FARGATE",
   "deploymentConfiguration": {
     "maximumPercent": 200,
@@ -11,20 +11,20 @@
     "awsvpcConfiguration": {
       "assignPublicIp": "DISABLED",
       "securityGroups": [
-        "REPLACE_ME_SECURITY_GROUP_ID"
+        "sg-01bfbb5052db7c98b"
       ],
       "subnets": [
-        "REPLACE_ME_PRIVATE_SUBNET_ONE",
-        "REPLACE_ME_PRIVATE_SUBNET_TWO"
+        "subnet-0019ddd41dfb3ecf2",
+        "subnet-076efeef15f23987e"
       ]
     }
   },
   "taskDefinition": "mythicalmysfitsservice",
   "loadBalancers": [
     {
-      "containerName": "MythicalMysfits-Service",
+      "containerName": "AnagramSolver-Service",
       "containerPort": 8080,
-      "targetGroupArn": "REPLACE_ME_NLB_TARGET_GROUP_ARN"
+      "targetGroupArn": "arn:aws:elasticloadbalancing:ca-central-1:398666377579:targetgroup/AnagramSolver-TargetGroup/a63fb6fed8f7ca2f"
     }
   ]
 }
