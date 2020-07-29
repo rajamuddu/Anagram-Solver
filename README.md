@@ -19,7 +19,7 @@ flask run dict_app.py <br />
 
 ### Permutations version:<br />
 Navigate to /app folder<br />
-export FLASK_APP=dict_app.py<br />
-flask run dict_app.py <br />
+export FLASK_APP=app.py<br />
+flask run app.py <br />
 
 
