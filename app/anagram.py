@@ -12,5 +12,3 @@ def anagrams(word):
 
     return list(set(temp)) 
 
-#if __name__ == "__main__":
-#    print(anagrams("acbcddd"))
