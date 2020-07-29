@@ -1,13 +1,15 @@
 <!doctype html>
 <html>
-    <body>
-        <p>Enter a word:</p>
+<title>Anagram Solver</title>
+    <body style="background-color:Azure;">
+    	<h2 style="color:DarkBlue;">Let's find some anagrams!</h2>
+        <h3 style="color:Crimson;">Enter a word:</h3>
                 <form method="post" action=".">
-                    <p><input type="text" name="word" /></p>
-                    <p><input type="submit" value="Find anagrams" /></p>
+                    <p><input type="text" style="font-size:medium; color: teal;" name="word" /></p>
+                    <p><input type="submit" style="font-size: larger; color: teal;" value="Submit" /></p>
                 </form>
-                <h4>Anagrams</h4>
-                 {% for i in result %}
-        {{ i }} {% endfor %}
+                <h3 style="color:Green;">Anagrams</h3>
+               <h4>  {% for i in result %}
+        {{ i }} {% endfor %} </h4>
     </body>
 </html>
